@@ -1,0 +1,14 @@
+.button{
+  background-color: var(--primary-Blue);
+  color: var(--primary-Text);
+  aspect-ratio: 3.28 / 1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.Button_Text{
+  font-size: 2em;
+  margin: 0;
+}

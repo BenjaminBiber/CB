@@ -1,0 +1,39 @@
+.Header_Desktop{
+  width: 100vw;
+  background-color: var(--primary-Background);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+}
+
+.Social_Media{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 15vw;
+  margin-right: 15vw;
+}
+
+.Links{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30vw;
+}
+
+.Link_Text{
+  font-size: 1.65em;
+}
+
+.social_Icons{
+  width: 2em;
+  height: 2em;
+}
+
+.Logo{
+  font-size: 3em;
+  margin: 0;
+}
