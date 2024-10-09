@@ -5,27 +5,32 @@
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
 }
 
 .Social_Media{
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 15vw;
-  margin-right: 15vw;
+  justify-content: flex-start;
+  width: 32vw;
+  gap: 5%;
+}
+
+.First_Social{
+  margin-left: 1em;
 }
 
 .Links{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 30vw;
+  width: 32vw;
 }
 
 .Link_Text{
   font-size: 1.65em;
+  min-width: 78px;
 }
 
 .social_Icons{
@@ -36,4 +41,124 @@
 .Logo{
   font-size: 3em;
   margin: 0;
+}
+
+.hamburger{
+  display: none;
+}
+
+.hamburger_Div{
+width: 32vw;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+display: none;
+}
+
+
+@media (max-width: 480px) {
+  .Desktop_Socials{
+    display: none;
+  }
+
+  .Links{
+    display: none;
+  }
+
+  .hamburger{
+    display: inline;
+    z-index: 3;
+  }
+
+  .hamburger_Div{
+    display: flex;
+  }
+}
+
+
+.hamburger_Background{
+  width: 100vw;
+  height: 100dvh;
+  background: var(--hamburger-Background);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  position:absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+
+#hamburger_id:checked + .hamburger_Background{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.menu {
+  --s: 30px;
+  --c: var(--primary-Text);
+
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s)/2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0)
+         no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000)
+         repeat-y content-box border-box;
+  background:
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+  background-size:
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+  cursor: pointer;
+  transition:
+    background-position .3s var(--_s,.3s),
+    clip-path 0s var(--_s,.6s);
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.menu:before,
+.menu:after {
+  content:"";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s,.3s));
+}
+
+.menu:checked {
+  clip-path: inset(0);
+  --_p: calc(-1*var(--s));
+  --_s: 0s;
+}
+.menu:checked:before {
+  transform: rotate(45deg);
+}
+.menu:checked:after {
+  transform: rotate(-45deg);
+}
+.menu:focus-visible {
+  clip-path: none;
+  -webkit-mask: none;
+  border: none;
+  outline: 2px solid var(--c);
+  outline-offset: 5px;
 }

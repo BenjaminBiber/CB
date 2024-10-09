@@ -2,6 +2,11 @@
   --primary-Text: #f4f4f4;
   --primary-Background: #353A41;
   --primary-Blue: #229BDD;
+  --mobile-BreakPoint: 480px;
+  --medium-BreakPoint: 768px;
+  --Large-BreakPoint: 1280px;
+  --Extra-Large-BreakPoint: 1440px;
+  --hamburger-Background: rgba(85, 85, 85, 0.8);
 }
 
 .Primary_Txt{
@@ -9,4 +14,8 @@
   font-family: "Karantina", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+.ATag{
+  text-decoration: none;
 }
