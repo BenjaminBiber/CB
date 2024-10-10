@@ -1,5 +1,6 @@
 .Header_Desktop{
   width: 100vw;
+  height: 5em;
   background-color: var(--primary-Background);
   top: 0;
   left: 0;
@@ -24,13 +25,17 @@
 .Links{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   width: 32vw;
+}
+
+.Mobile_Links{
+  text-align: center;
 }
 
 .Link_Text{
   font-size: 1.65em;
-  min-width: 78px;
+  margin: 0.35em;
 }
 
 .social_Icons{
@@ -76,6 +81,21 @@ display: none;
   }
 }
 
+@media (max-width: 768px) {
+
+  .Links{
+    display: none;
+  }
+
+  .hamburger{
+    display: inline;
+    z-index: 3;
+  }
+
+  .hamburger_Div{
+    display: flex;
+  }
+}
 
 .hamburger_Background{
   width: 100vw;

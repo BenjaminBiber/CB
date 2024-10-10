@@ -11,3 +11,73 @@
 .Background_LandingPage{
   background-color: var(--primary-Background);
 }
+
+.Landing_Page_Main{
+  height: 95dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Landing_Page_Main_Item{
+  width: 50vw;
+  height: 95dvh;
+}
+
+#Landing_Page_L{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#Landing_Page_R{
+  display: flex;
+  align-items: flex-end;
+}
+
+.fade-img{
+  height: 80dvh;
+  width: auto;
+  margin-left: 5em;
+  transition: transform 0.2s ease-out;
+}
+
+.image-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 80dvh;
+}
+
+#cursor{
+  height: 3.5em;
+  width: 0.25em;
+  border-radius: 1px;
+  margin-left: 0.1em;
+  background-color: white;
+  animation: blink-animation 0.5s steps(5, start) infinite;
+
+}
+
+#type_text{
+  display: flex;
+  flex-direction: row;
+}
+
+#Text_Block{
+  width: 25vw;
+  margin-top: 15em;
+}
+
+#Action_Buttons{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}

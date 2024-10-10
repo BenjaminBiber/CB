@@ -1,4 +1,32 @@
 <section id="Home">
   <app-header-component></app-header-component>
   <div class="Background Background_LandingPage" id="Landing_Page"></div>
+  <div class="Landing_Page_Main">
+    <div id="Landing_Page_L" class="Landing_Page_Main_Item">
+      <div id="Text_Block">
+        <h4 class="Primary_Txt" style="font-size: 3.5em; margin: 0;">Hi, mein Name ist Christoph,</h4>
+        <div id="type_text">
+          <h4 class="Primary_Txt" style="font-size: 3.5em; margin: 0em;">Ich bin </h4>
+          <h4 class="Primary_Txt" style="font-size: 3.5em; margin: 0em; color: var(--primary-Blue); margin-left: 0.25em;">{{viewText}}</h4>
+          <div id="cursor"></div>
+        </div>
+          <p class="Primary_Txt" style="font-size: 1.7em;">und habe mir als Ziel gesetzt Videos, Fotos und Kurzfilme in Höchstmöglicher Qualität zu produzieren.</p>
+          <div id="Action_Buttons">
+            <button style="width: 12em; margin: 1em; margin-right: 3em; margin-left: 0;" class="button_OutLnd hover_Normal">
+              <p class="Primary_Txt Button_Text">Projekte</p>
+            </button>
+            <button style="width: 12em; margin: 1em;" class="button_OutLnd hover_Normal">
+              <p class="Primary_Txt Button_Text">Mehr Über Mich</p>
+            </button>
+          </div>
+        </div>
+
+    </div>
+    <div id="Landing_Page_R" class="Landing_Page_Main_Item">
+      <div class="image-container" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
+        <img src="potrait.png" alt="potrait" class="fade-img" [style.transform]="transformStyle"/>
+      </div>
+    </div>
+  </div>
+
 </section>
