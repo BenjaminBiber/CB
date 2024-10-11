@@ -23,12 +23,12 @@ export class AppComponent implements OnInit {
       for (let desc of this.Description) {
         for (let txt of desc) {
           this.viewText += txt;
-          await this.sleep(450);
+          await this.sleep(300);
         }
         await this.sleep(1000)
         while (this.viewText.length > 0) {
           this.viewText = this.viewText.slice(0, -1);
-          await this.sleep(450);
+          await this.sleep(300);
         }
       }
     }
