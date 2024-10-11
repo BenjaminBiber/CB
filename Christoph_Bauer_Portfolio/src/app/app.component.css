@@ -59,12 +59,109 @@
   align-items: flex-end;
 }
 
-@media(max-width: 480px)
+.big_Txt{
+  font-size: 3.5em;
+}
+
+.sml_Txt{
+  font-size: 1.7em;
+}
+
+#arrow_to_bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  left: 0;
+  position: absolute;
+}
+
+div.arrow {
+	width: 6vmin;
+	height: 6vmin;
+	box-sizing: border-box;
+	position: absolute;
+  transform: scale(0.35) rotate(135deg);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border-width: .8vmin .8vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transition: .2s ease;
+		display: block;
+		transform-origin: 100% 0;
+	}
+
+
+	&:after {
+		content: '';
+		float: left;
+		position: relative;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		border-width: 0 .8vmin 0 0;
+		border-style: solid;
+		border-color: #fafafa;
+		transform-origin: 100% 0;
+		transition:.2s ease;
+	}
+
+	&:hover::after {
+		transform: rotate(45deg);
+		border-color: var(--primary-Blue);
+		height: 120%;
+	}
+	&:hover::before {
+		border-color: var(--primary-Blue);
+		transform: scale(.8);
+
+	}
+
+}
+
+.left_Action_Button{
+  margin-right: 3em;
+  margin-left: 0;
+}
+
+@media(max-width: 768px)
 {
+
+  #arrow_to_bottom{
+    margin-top: 1.5em !important;
+  }
+
+  #Action_Buttons{
+    justify-content: space-between;
+  }
+
+  .left_Action_Button{
+    margin-right: 0 !important;
+    margin-left: 1em !important;
+  }
+
+  .big_Txt{
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .sml_Txt{
+    font-size: 1.2;
+    text-align: center;
+    margin-bottom: 0.2em;
+  }
+
   #Picture_Box_Mobile{
     display:flex;
     width: 100vw;
     height: auto;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 5em;
   }
 
   .image-container_Mobile{
@@ -95,13 +192,33 @@
 
   #Landing_Page_L{
     display: flex;
-    align-items: flex-start;
     justify-content: center;
+    align-items: flex-start;
   }
 
   #Landing_Page_R{
     display: none;
     visibility: hidden;
+  }
+
+  .Landing_Page_Main{
+    flex-direction: column;
+    height: calc(100dvh - 5em);
+  }
+
+  .Landing_Page_Main_Item{
+    height: 50dvh;
+  }
+
+  #Text_Block{
+    width: calc(100vw - 2em) !important;
+    margin-top: 5em !important;
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+
+  #type_text{
+    justify-content: center;
   }
 }
 
