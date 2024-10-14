@@ -1,15 +1,27 @@
 .Background{
   height: 100dvh;
-  width: 100vw;
-  position: fixed;
   z-index: -1;
-  left: 0;
-  top: 0;
   flex-shrink: 0;
 }
 
 .Background_LandingPage{
+  left: 0;
+  top: 0;
+  width: 100vw;
   background-color: var(--primary-Background);
+  position: fixed;
+}
+
+.Background_Projects{
+  background: linear-gradient(180deg, rgba(53,58,65,1) 0%, rgba(49,53,60,1) 25%, rgba(28,30,34,1) 76%, rgba(0,0,0,1) 100%);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.Background_About{
+  background: linear-gradient(0deg, rgba(53,58,65,1) 0%, rgba(49,53,60,1) 25%, rgba(28,30,34,1) 76%, rgba(0,0,0,1) 100%);
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .Landing_Page_Main{
@@ -76,6 +88,61 @@
   position: absolute;
 }
 
+.info-card-projects{
+  background-color: var(--primary-Text);
+  clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+  width: 100%;
+  position: absolute;
+  height: 13.5em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.project-info{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+}
+
+.project-image-box{
+  width: 25vw !important;
+  margin: 1em;
+  height: 70dvh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+
+.project-title{
+  font-size: 3.5em !important;
+  text-align: center;
+  color: black;
+  margin: 0.15em;
+}
+
+.project-year{
+  font-size: 2.5em !important;
+  text-align: right;
+  color: var(--primary-Blue);
+  margin: 0.15em;
+}
+
+.project-image{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  aspect-ratio: 1 / 1.39;
+  box-shadow: 0.2px 0.2px 50px 1px rgba(255,255,255,0.17);
+}
+
 div.arrow {
 	width: 6vmin;
 	height: 6vmin;
@@ -94,7 +161,6 @@ div.arrow {
 		display: block;
 		transform-origin: 100% 0;
 	}
-
 
 	&:after {
 		content: '';
@@ -128,8 +194,28 @@ div.arrow {
   margin-left: 0;
 }
 
+.Heading{
+  font-size: 3em !important;
+  color: var(--primary-Text);
+  font-weight: 400;
+  text-align: center;
+}
+
+@media(max-width: 480px){
+
+  .project-image-box{
+    width: 80vw !important;
+  }
+}
+
+
 @media(max-width: 768px)
 {
+
+  .project-image-box{
+    width: 70vw !important;
+    height: 40dvh !important;
+  }
 
   #arrow_to_bottom{
     margin-top: 1.5em !important;

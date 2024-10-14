@@ -17,9 +17,11 @@
         </div>
           <p class="Primary_Txt sml_Txt">und habe mir als Ziel gesetzt Videos, Fotos und Kurzfilme in Höchstmöglicher Qualität zu produzieren.</p>
           <div id="Action_Buttons">
-            <button style="width: 12em; margin: 1em;" class="button_OutLnd hover_Normal left_Action_Button">
-              <p class="Primary_Txt Button_Text">Projekte</p>
-            </button>
+            <a href="#Projects">
+              <button style="width: 12em; margin: 1em;" class="button_OutLnd hover_Normal left_Action_Button">
+                <p class="Primary_Txt Button_Text">Projekte</p>
+              </button>
+            </a>
             <button style="width: 12em; margin: 1em;" class="button_OutLnd hover_Normal">
               <p class="Primary_Txt Button_Text">Mehr Über Mich</p>
             </button>
@@ -37,4 +39,25 @@
   <div id="arrow_to_bottom">
     <div class="arrow"></div>
   </div>
+</section>
+<section id="Projects">
+  <div class="Background Background_Projects" id="Project_Page">
+    <h4 class="Heading Primary_Txt">Projekte</h4>
+    <carousel [counter]="false" [arrows]="false" [gapBetweenSlides]="0" [infinite]="true">
+      <div class="slides-container" *ngFor="let project of projects">
+        <div class="project-image-box carousel-slide hover_Normal">
+          <img [src]="project.image" alt="Project image" class="project-image"/>
+          <div class="info-card-projects">
+            <div class="project-info">
+              <p class="project-year Primary_Txt">{{project.year}}</p>
+              <p class="project-title Primary_Txt">{{project.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </carousel>
+  </div>
+</section>
+<section id="About">
+  <div class="Background Background_About" id="About_Page"></div>
 </section>

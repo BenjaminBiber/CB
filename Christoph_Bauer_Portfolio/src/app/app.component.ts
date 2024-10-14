@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponentComponent } from "../header-component/header-component.component";
+import { CarouselModule } from 'ngx-carousel-ease';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponentComponent],
+  imports: [RouterOutlet, HeaderComponentComponent, CarouselModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -56,4 +58,67 @@ export class AppComponent implements OnInit {
   onMouseLeave() {
     this.transformStyle = 'translate(0, 0) scale(1)';
   }
+
+  projects = [
+    {
+      title: 'Summervibe Production',
+      year: 2020,
+      image: 'Projects/test.jpg'
+    },
+    {
+      title: 'ART - Das kurzfilm Projekt',
+      year: 2023,
+      image: 'Projects/test2.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    },
+    {
+      title: 'Maschinenringe Deutschland',
+      year: 2021,
+      image: 'Projects/test1.jpg'
+    }
+  ];
 }
