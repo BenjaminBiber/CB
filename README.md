@@ -1,1 +1,1 @@
-# CB
+This is a Portfolio for a friend of mine. This is my first Angular Project and the first Project to be as responsive as it gets. I tried to keep the Design of the Web App Simple and Minimalist, but still trying to integrate small Details for people to notice. 
