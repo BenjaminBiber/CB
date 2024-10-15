@@ -205,6 +205,11 @@ div.arrow {
 
   .project-image-box{
     width: 80vw !important;
+    margin-top: 13em;
+  }
+
+  .project-info{
+    margin-bottom: 0.1em !important;
   }
 }
 
@@ -214,6 +219,7 @@ div.arrow {
 
   .project-image-box{
     width: 70vw !important;
+    margin-top: 13em;
     height: 40dvh !important;
   }
 
