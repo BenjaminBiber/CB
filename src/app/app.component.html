@@ -43,7 +43,7 @@
 <section id="Projects">
   <div class="Background Background_Projects" id="Project_Page">
     <h4 class="Heading Primary_Txt">Projekte</h4>
-    <carousel [counter]="false" [arrows]="false" [gapBetweenSlides]="0" [infinite]="true">
+    <carousel [counter]="false" [arrows]="false" [gapBetweenSlides]="0" [infinite]="true" [slideToScroll]="4">
       <div class="slides-container" *ngFor="let project of projects">
         <div class="project-image-box carousel-slide hover_Normal">
           <img [src]="project.image" alt="Project image" class="project-image"/>
