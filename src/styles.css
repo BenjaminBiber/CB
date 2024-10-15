@@ -1,7 +1,7 @@
 :root{
   --primary-Text: #f4f4f4;
   --primary-Background: #353A41;
-  --primary-Blue: /* #229BDD */ red;
+  --primary-Blue:#229BDD ;
   --mobile-BreakPoint: 480px;
   --medium-BreakPoint: 768px;
   --Large-BreakPoint: 1280px;
