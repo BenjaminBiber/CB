@@ -121,4 +121,45 @@ export class AppComponent implements OnInit {
       image: 'Projects/test1.jpg'
     }
   ];
+
+  events = [{
+    start: 2022,
+    end: 2024,
+    name: 'test event'
+  },
+  {
+    start: 2019,
+    end: 2021,
+    name: 'Monday'
+  }
+]
+
+Works = [{
+  img: 'Works/test.jpg',
+  alt: 'test'
+},{
+  img: 'Works/test1.jpg',
+  alt: 'test2'
+},{
+  img: 'Works/test2.jpg',
+  alt: 'test3'
+},{
+  img: 'Works/test3.jpg',
+  alt: 'test4'
+},{
+  img: 'Works/test4.jpg',
+  alt: 'test5'
+},{
+  img: 'Works/test5.jpg',
+  alt: 'test5'
+},{
+  img: 'Works/test6.jpg',
+  alt: 'test6'
+},{
+  img: 'Works/test7.jpg',
+  alt: 'test7'
+},{
+  img: 'Works/test8.jpg',
+  alt: 'test8'
+},]
 }

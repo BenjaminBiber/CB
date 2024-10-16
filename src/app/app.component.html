@@ -45,7 +45,7 @@
     <h4 class="Heading Primary_Txt">Projekte</h4>
     <carousel [counter]="false" [arrows]="false" [gapBetweenSlides]="0" [infinite]="true" [slideToScroll]="4">
       <div class="slides-container" *ngFor="let project of projects">
-        <div class="project-image-box carousel-slide hover_Normal">
+        <div class="project-image-box carousel-slide">
           <img [src]="project.image" alt="Project image" class="project-image"/>
           <div class="info-card-projects">
             <div class="project-info">
@@ -59,5 +59,33 @@
   </div>
 </section>
 <section id="About">
-  <div class="Background Background_About" id="About_Page"></div>
+  <div class="Background Background_About" id="About_Page">
+    <h4 class="Heading Primary_Txt">Über Mich</h4>
+    <div class="timeline"></div>
+    <div class="timeline-items" >
+      <div class="time-circle" *ngFor="let event of events"></div>
+    </div>
+  </div>
+</section>
+<section id="Arts">
+  <div class="Background Background_Arts" id="Art_Page">
+    <h4 class="Heading Primary_Txt">Werke</h4>
+    <div class="top_sliding_div">
+      <div class="work-slide" >
+        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+      </div>
+      <div class="work-slide" >
+        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+      </div>
+    </div>
+
+    <div class="top_sliding_div_R">
+      <div class="work-slide_R" >
+        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+      </div>
+      <div class="work-slide_R" >
+        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+      </div>
+    </div>
+  </div>
 </section>
