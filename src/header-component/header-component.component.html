@@ -10,21 +10,25 @@
 
   <div class="Links">
     <a href="#Projects" class="Primary_Txt Link_Text hover_Normal UnderlineHover">Projekte</a>
-    <a class="Primary_Txt Link_Text hover_Normal UnderlineHover">Über Mich</a>
-    <a class="Primary_Txt Link_Text hover_Normal UnderlineHover">Werke</a>
-    <button style="width: 12em; margin: 1em;" class="button hover_Normal">
-      <p class="Primary_Txt Button_Text">Kontakt</p>
-    </button>
+    <a  class="Primary_Txt Link_Text hover_Normal UnderlineHover">Über Mich</a>
+    <a href="#Arts" class="Primary_Txt Link_Text hover_Normal UnderlineHover">Werke</a>
+    <a href="https://summervibeproduction.webador.de/kontakt">
+      <button style="width: 12em; margin: 1em;" class="button hover_Normal">
+        <p class="Primary_Txt Button_Text">Kontakt</p>
+      </button>
+    </a>
   </div>
   <div class="hamburger_Div">
     <input type="checkbox"  [(ngModel)]="this.showMenu" role="button" aria-label="Display the menu" id="hamburger_id" class="menu hamburger">
     <div class="hamburger_Background">
       <a href="#Projects" (click)="this.HideBackground()" class="Primary_Txt Link_Text Mobile_Links hover_Normal UnderlineHover">Projekte</a>
-      <a (click)="this.HideBackground()" class="Primary_Txt Link_Text Mobile_Links hover_Normal UnderlineHover">Über Mich</a>
-      <a (click)="this.HideBackground()" class="Primary_Txt Link_Text Mobile_Links hover_Normal UnderlineHover">Werke</a>
-      <button (click)="this.HideBackground()" style="width: 12em; margin: 0.5em;" class="button hover_Normal">
-        <p class="Primary_Txt Button_Text">Kontakt</p>
-      </button>
+      <a  (click)="this.HideBackground()" class="Primary_Txt Link_Text Mobile_Links hover_Normal UnderlineHover">Über Mich</a>
+      <a href="#Arts" (click)="this.HideBackground()" class="Primary_Txt Link_Text Mobile_Links hover_Normal UnderlineHover">Werke</a>
+      <a style="text-decoration: none;" href="https://summervibeproduction.webador.de/kontakt">
+        <button (click)="this.HideBackground()" style="width: 12em; margin: 0.5em;" class="button hover_Normal">
+          <p class="Primary_Txt Button_Text">Kontakt</p>
+        </button>
+      </a>
     </div>
   </div>
 </div>
