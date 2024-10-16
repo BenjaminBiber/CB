@@ -80,7 +80,7 @@ white-space: nowrap;
 }
 
 .work-slide{
-  animation: 40s work-slide infinite linear;
+  animation: 65s work-slide infinite linear;
 }
 
 @keyframes work-slide {
@@ -113,7 +113,7 @@ white-space: nowrap;
 .work-slide_R{
   display: inline-block;
   gap: 2%;
-  animation: 40s work-slide_R infinite linear;
+  animation: 65s work-slide_R infinite linear;
 }
 
 .Landing_Page_Main{
