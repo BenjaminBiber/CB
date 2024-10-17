@@ -73,20 +73,20 @@
       <h4 class="Heading Primary_Txt" style="margin: 0.5em">Werke</h4>
       <div class="logos">
         <div class="logos-slide">
-          <img *ngFor="let item of Works.slice(0, Math.floor(Works.length / 2))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+          <img *ngFor="let item of Works.slice(0,(Works.length / 2))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
         </div>
 
         <div class="logos-slide">
-          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+          <img *ngFor="let item of Works.slice(0,(Works.length / 2))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
         </div>
       </div>
       <div class="logos">
         <div class="logos-slide-reverse">
-          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+          <img *ngFor="let item of Works.slice((Works.length / 2),(Works.length))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
         </div>
 
         <div class="logos-slide-reverse">
-          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+          <img *ngFor="let item of Works.slice((Works.length / 2),(Works.length))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
         </div>
       </div>
     </div>
