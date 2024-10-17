@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponentComponent } from "../header-component/header-component.component";
 import { CarouselModule } from 'ngx-carousel-ease';
 import { CommonModule } from '@angular/common';
+import { FooterComponentComponent } from '../footer-component/footer-component.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponentComponent, CarouselModule, CommonModule],
+  imports: [RouterOutlet, HeaderComponentComponent, CarouselModule, CommonModule, FooterComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

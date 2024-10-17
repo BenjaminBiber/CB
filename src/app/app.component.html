@@ -69,23 +69,29 @@
 </section>
 <section id="Arts">
   <div class="Background Background_Arts" id="Art_Page">
-    <h4 class="Heading Primary_Txt">Werke</h4>
-    <div class="top_sliding_div">
-      <div class="work-slide" >
-        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
-      </div>
-      <div class="work-slide" >
-        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
-      </div>
-    </div>
+    <div class="Arts_Main">
+      <h4 class="Heading Primary_Txt" style="margin: 0.5em">Werke</h4>
+      <div class="logos">
+        <div class="logos-slide">
+          <img *ngFor="let item of Works.slice(0, Math.floor(Works.length / 2))" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+        </div>
 
-    <div class="top_sliding_div_R">
-      <div class="work-slide_R" >
-        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+        <div class="logos-slide">
+          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+        </div>
       </div>
-      <div class="work-slide_R" >
-        <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+      <div class="logos">
+        <div class="logos-slide-reverse">
+          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+        </div>
+
+        <div class="logos-slide-reverse">
+          <img *ngFor="let item of Works" src="{{item.img}}" class="work-slide-img" alt="{{item.alt}}" />
+        </div>
       </div>
     </div>
+    <app-footer-component></app-footer-component>
   </div>
+
 </section>
+
