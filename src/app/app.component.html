@@ -9,13 +9,13 @@
     </div>
     <div id="Landing_Page_L" class="Landing_Page_Main_Item">
       <div id="Text_Block">
-        <h4 class="Primary_Txt big_Txt" style="margin: 0;">Hi, mein Name ist Christoph,</h4>
+        <h4 class="Primary_Txt big_Txt" style="margin: 0;">Hi, mein Name ist <span class="special_Highlight">Christoph</span>,</h4>
         <div id="type_text">
           <h4 class="Primary_Txt big_Txt" style="margin: 0em;">Ich bin </h4>
           <h4 class="Primary_Txt big_Txt" style="margin: 0em; color: var(--primary-Blue); margin-left: 0.25em;">{{viewText}}</h4>
           <div id="cursor"></div>
         </div>
-          <p class="Primary_Txt sml_Txt">und habe mir als Ziel gesetzt Videos, Fotos und Kurzfilme in Höchstmöglicher Qualität zu produzieren.</p>
+          <p class="Primary_Txt sml_Txt">und habe mir als Ziel gesetzt Videos, Fotos und Kurzfilme in <span class="special_Highlight">Höchstmöglicher Qualität</span> zu produzieren.</p>
           <div id="Action_Buttons">
             <a href="#Projects">
               <button style="width: 12em; margin: 1em;" class="button_OutLnd hover_Normal left_Action_Button">
@@ -63,7 +63,16 @@
     <h4 class="Heading Primary_Txt">Über Mich</h4>
     <div class="timeline"></div>
     <div class="timeline-items" >
-      <div class="time-circle" *ngFor="let event of events"></div>
+      <div class="time-circle" *ngFor="let event of events">
+        <div [ngClass]="{'timeline_Text_l': events.indexOf(event) % 2 == 0, 'timeline_Text': events.indexOf(event) % 2 != 0}">
+          <div class="timeline-info">
+            <h1 class="Primary_Txt">{{event.start}} - {{event.end}}</h1>
+            <h1 class="Primary_Txt" style="font-size: 2em;">{{event.name}}</h1>
+            <div class="arrow" style="margin-left: -2.5%; margin-right: -2.5%; position: relative;"></div>
+            <div [ngClass]="{'timeline_description_l': events.indexOf(event) % 2 == 0, 'timeline_description': events.indexOf(event) % 2 != 0}"><p>{{event.description}}</p></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

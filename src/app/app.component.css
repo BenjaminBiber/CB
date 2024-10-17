@@ -217,6 +217,103 @@ white-space: nowrap;
   background-color: transparent;
   border: 4px solid var(--primary-Text);
   background: var(--primary-Background);
+  position: relative;
+}
+
+.timeline_Text_l{
+  position: absolute;
+  right: 9em;
+  top: 0;
+  height: 100%;
+  width: 20em;
+}
+
+.timeline_Text_l .timeline-info{
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.timeline_description_l{
+  transition: opacity 1s ease;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 20em;
+  height: 5em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(var(--primary-Background), var(--primary-Background)) padding-box,
+  var(--button-Outline-Gradient) border-box;
+  border: 3px solid transparent;
+  color: var(--primary-Text);
+}
+
+.timeline_Text_l:hover .timeline_description_l{
+  opacity: 1;
+}
+
+.timeline_Text{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40em;
+}
+
+.timeline_Text:hover .timeline_description{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.timeline_Text:hover .timeline_description::after {
+  animation: fadeout 2s forwards;
+}
+
+.timeline_description_first{
+  opacity: 1;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0}
+  }
+
+.timeline_description{
+  transition: opacity 1s ease;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 20em;
+  height: 5em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(var(--primary-Background), var(--primary-Background)) padding-box,
+  var(--button-Outline-Gradient) border-box;
+  border: 3px solid transparent;
+  color: var(--primary-Text);
+}
+
+.timeline-info{
+  width: 100%;
+  height: 100%;
+ position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 3em;
+  gap: 7%;
+  color: var(--primary-Text);
+  font-size: 1.5em;
+}
+
+.timeline-info h1{
+  margin: 0;
 }
 
 .timeline{
@@ -232,7 +329,6 @@ white-space: nowrap;
   height: 80dvh;
   align-self: center;
   position: absolute;
-  margin-top: 5em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -329,7 +425,69 @@ div.arrow {
   text-align: center;
 }
 
+@media(min-width: 700px)
+{
+  .timeline{
+    display: inline;
+    position: absolute;
+  }
+}
+
+@media(max-width: 699px)
+{
+
+  .timeline{
+    border: 2px solid rgba(255,255,255,0.2);
+  }
+
+}
+
+@media(max-width: 890px)
+{
+
+  .timeline_Text{
+    left: -100%;
+    top: 100%;
+    width: 40vw;
+    position: absolute;
+    margin-left: 0;
+  }
+
+  .timeline-info .arrow{
+    display: none;
+  }
+
+  .timeline_Text_l{
+    left: -100%;
+    top: 100%;
+    width: 40vw;
+    position: absolute;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .timeline_description{
+    left: -50%;
+    top: 200% !important;
+    width: 75vw !important;
+  }
+
+  .timeline_description_l{
+    left: -50%;
+    top: 200% !important;
+    width: 75vw !important;
+  }
+
+  .timeline-info{
+    margin-left: 0;
+    width: 40vw;
+    flex-direction: column !important;
+  }
+}
+
 @media(max-width: 480px){
+
 
   .project-image-box{
     width: 80vw !important;
@@ -549,4 +707,8 @@ div.arrow {
 .logos-slide-reverse{
   display: inline-block;
   animation: 70s work-slide_R infinite linear;
+}
+
+.special_Highlight::selection{
+  background: var(--primary-Blue);
 }

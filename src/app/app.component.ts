@@ -126,12 +126,14 @@ export class AppComponent implements OnInit {
   events = [{
     start: 2022,
     end: 2024,
-    name: 'test event'
+    name: 'test event',
+    description: 'das ist eine Test beschreibung, der TExt ist wichtig, der wird gehovert'
   },
   {
     start: 2019,
     end: 2021,
-    name: 'Monday'
+    name: 'Monday',
+    description: 'das ist eine Test beschreibung, der TExt ist wichtig, der wird gehovert'
   }
 ]
 

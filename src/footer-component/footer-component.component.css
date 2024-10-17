@@ -87,7 +87,13 @@ bottom: 0;
     display: none;
   }
 
+  .Header_Desktop{
+    justify-content: space-evenly;
+  }
 
+  .Social_Media{
+    margin-right: 0;
+  }
 }
 
 .Links:hover div.arrow::after{
