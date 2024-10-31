@@ -52,7 +52,7 @@ body{
 		height: 4px;
 		border-radius: 4px;
     background: linear-gradient(to right, #f4f4f4, #ebebf3, #dee4f3, #ceddf2, #bbd7f0, #aad0ed, #98c9ea, #84c3e7, #70b9e4, #5bafe2, #43a5df, #229bdd);
-		bottom: 0;
+		bottom: -5%;
 		left: 0;
 		transform-origin: right;
 		transform: scaleX(0);
