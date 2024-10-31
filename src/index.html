@@ -1,6 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <script>
+    let originalTitle = document.title;
+    let interval;
+
+    document.addEventListener('visibilitychange', function()
+    {
+      if(document.hidden)
+    {
+      let message = ['Komm Zurück!','Schau dir das hier an'];
+      let messageIndex = 0;
+
+      interval = setInterval(function(){
+        document.title = message[messageIndex];
+        messageIndex = (messageIndex + 1) % message.length;
+      }, 1000);
+    }else{
+      clearInterval(interval);
+      document.title = originalTitle;
+    }
+    });
+  </script>
   <meta charset="utf-8">
   <title>Portfolio</title>
   <base href="/">
