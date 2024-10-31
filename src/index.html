@@ -15,7 +15,7 @@
       interval = setInterval(function(){
         document.title = message[messageIndex];
         messageIndex = (messageIndex + 1) % message.length;
-      }, 1000);
+      }, 2000);
     }else{
       clearInterval(interval);
       document.title = originalTitle;
